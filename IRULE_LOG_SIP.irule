@@ -12,6 +12,7 @@ when RULE_INIT {
 
 
 when SIP_RESPONSE_SEND {
+
     if { $static::sip_debug } {
       log local0.debug "Method => [SIP::method] Call-Id => [SIP::call_id] SIP response: code = [SIP::response code] phrase = [SIP::response phrase]"
     }
